@@ -15,7 +15,8 @@ public class Main
     public static void main(String[] args) {
         
         Scanner sc = new Scanner (System.in);
-
+		System.out.println("Enter one line of data in this format \'1 1 2 3\'\n[qty of 3 number groups][num1 num2 num3]\n");
+		
         int N = sc.nextInt();
         int[][] A = new int[N][3];
         
