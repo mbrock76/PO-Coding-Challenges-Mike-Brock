@@ -9,7 +9,7 @@ public class Main
             
             char[] temp = lines[i].replaceAll("[^0-9]", "").toCharArray();
             int sum = 0;
-            System.out.println(Arrays.toString(lines));
+
             for(char each:temp){
                 sum += Integer.parseInt(String.valueOf(each));
             }
