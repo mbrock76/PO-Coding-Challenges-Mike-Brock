@@ -2,17 +2,14 @@
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class Main
-{
+public class Main{
+    
     public static void printMedian(String[] lines){
         
         ArrayList<Integer> temp = new ArrayList<Integer>();
-        //stream.map.collect not working, have to do it the hard way 
+
         for(String each:lines){
-            String[] myarr = each.split("[^0-9]");
-            for(String mychar:myarr){
-                temp.add(Integer.parseInt(mychar));
-            }
+            temp.addAll(Arrays.stream(each.split("[^0-9]")).map(Integer::valueOf).collect(Collectors.toList()));
         }
         Collections.sort(temp);
         
@@ -25,7 +22,7 @@ public class Main
             median = temp.get((int)temp.size()/2);
         }
         
-        System.out.println(median);
+        System.out.println("The median of " + Arrays.toString(temp.toArray()) + " is " + median);
     }
     
     public static void main(String[] args) {
