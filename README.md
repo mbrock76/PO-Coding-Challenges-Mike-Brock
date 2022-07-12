@@ -2,7 +2,7 @@
 
 This directory is split by week and labeled with mondays date
 
-Within each of these you find directories for each coding challenge
+Within each of these you will find directories for each coding challenge
 
 There is both a java and class file, you can:
 
